@@ -91,54 +91,6 @@ On success, logs date & time in attendance table
 📊 Attendance Reporting
 View attendance list by student/date
 
-Export as Excel or CSV (optional)
-
-📦 Sample Models (models.py)
-python
-Copy code
-class Student(models.Model):
-    name = models.CharField(max_length=100)
-    student_id = models.CharField(max_length=50, unique=True)
-    image = models.ImageField(upload_to='images/')
-
-class Attendance(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    timestamp = models.DateTimeField(auto_now_add=True)
-🧠 How Face Recognition Works
-Student's image is encoded using the face_recognition library.
-
-When the webcam captures a face, it encodes it in real time.
-
-If encoding matches a known student, attendance is marked.
-
-💡 Future Enhancements
-Email alerts for attendance events
-
-Attendance analytics dashboard
-
-Mobile web view
-
-QR code fallback verification
-
-Export attendance report
-
-📜 License
-This project is licensed under the MIT License
-
-sql
-Copy code
-
----
-
-## ✅ Sample Commit Messages
-
-```bash
-git add .
-git commit -m "feat: added student registration and face encoding"
-git commit -m "feat: implemented real-time face verification"
-git commit -m "chore: created base HTML and CSS for UI"
-git commit -m "fix: resolved camera timeout error during scan"
-📌 Bonus Add-ons You Can Include
 requirements.txt:
 
 txt
